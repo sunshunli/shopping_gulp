@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+    <title>WBC 电商平台</title>
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body>
+    <!-- 顶部导航条 -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WBC电商平台</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">商品管理<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- 页面主题 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button id="newBtn" type="button" class="btn btn-success">新增商品</button>
+                    <button type="button" class="btn btn-warning">修改商品</button>
+                    <button type="button" class="btn btn-danger">删除商品</button>
+                    <button type="button" class="btn btn-info">下架</button>
+                    <button type="button" class="btn btn-info">上架</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped table-hover mt-20 mb-0">
+            <tr>
+                <th class="w-30">
+                    <input type="checkbox">
+                </th>
+                <th class="w-50">序号</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <th>商品介绍</th>
+                <th>商品库存</th>
+                <th>商品类别</th>
+            </tr>
+            <tr>
+                <td class="w-30">
+                    <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>iphone6</td>
+                <td>5000</td>
+                <td>苹果</td>
+                <td>100</td>
+                <td>电子产品</td>
+            </tr>
+            <tr>
+                <td class="w-30">
+                    <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>iphone6</td>
+                <td>5000</td>
+                <td>苹果</td>
+                <td>100</td>
+                <td>电子产品</td>
+            </tr>
+            <tr>
+                <td class="w-30">
+                    <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>iphone6</td>
+                <td>5000</td>
+                <td>苹果</td>
+                <td>100</td>
+                <td>电子产品</td>
+            </tr>
+            <tr>
+                <td class="w-30">
+                    <input type="checkbox">
+                </td>
+                <td>1</td>
+                <td>iphone6</td>
+                <td>5000</td>
+                <td>苹果</td>
+                <td>100</td>
+                <td>电子产品</td>
+            </tr>
+        </table>
+        <!-- 分页 -->
+        <nav aria-label="Page navigation" class="pull-right">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 模态框 -->
+        <div id="goodsDlg" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">新增商品</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">商品名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="title" placeholder="请输入商品名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">价格</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="price" placeholder="请输入价格">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">商品介绍</label>
+                                <div class="col-sm-6">
+                                    <textarea id="detail" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">库存</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="amount" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">类别</label>
+                                <div class="col-sm-2">
+                                    <select id="classify" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">状态</label>
+                                <div class="col-sm-3">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="status" id="inlineRadio1" value="1" checked> 上架
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="status" id="inlineRadio2" value="0"> 下架
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button id="saveBtn" type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/jquery-3.2.1.min.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <script src="./assets/bootstrap-3.3.7.min.js"></script>
+    <script src="./js/bundle.js"></script>
+</body>
+
+</html>

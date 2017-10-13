@@ -40,6 +40,17 @@ function dev() {
 		        }));
     });
     /**
+     * fonts文件夹下的所有文件处理
+     */
+    gulp.task('fonts:dev', function () {
+        return gulp
+                .src(Config.fonts.src)
+                .pipe(gulp.dest(Config.fonts.dist))
+                .pipe(reload({
+                    stream: true
+                }));
+    });
+    /**
      * CSS样式处理
      */
     gulp.task('css:dev', function () {
@@ -140,7 +151,7 @@ function dev() {
     });
 
     gulp.task('dev', function(cb){
-        sequence('clean:dev', ['css:dev', 'sass:dev', 'js:dev', 'assets:dev', 'images:dev', 'html:dev'], 'base64')(function(){
+        sequence('clean:dev', ['css:dev', 'sass:dev', 'js:dev', 'assets:dev', 'fonts:dev', 'images:dev', 'html:dev'], 'base64')(function(){
             browserSync.init({
                 server: {
                     baseDir: Config.dist
@@ -150,7 +161,9 @@ function dev() {
                 /*由于gulp-rev-collector修改html中文件有延时，导致页面刷新后没有变化
                  *这里加2秒页面刷新延时，以后所有的reload()都会延时2秒
                 */
-                reloadDelay: 2000
+                reloadDelay: 2000,
+                // 切换browser-sync开始页面
+                startPath: "/admin.html"
             });
             // Watch .css files
             gulp.watch(Config.css.src, ['css:dev']);
